@@ -1,4 +1,4 @@
-package banking.maven;
+package com.mycompany.khata;
 
 import java.io.IOException;
 import javafx.fxml.FXML;

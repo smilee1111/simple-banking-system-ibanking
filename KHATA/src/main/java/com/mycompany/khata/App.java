@@ -1,4 +1,4 @@
-package banking.maven;
+package com.mycompany.khata;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
