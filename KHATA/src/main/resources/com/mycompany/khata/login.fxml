@@ -19,7 +19,8 @@
     <HBox spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="2">
         <children>
             <Button text="Login" onAction="#handleLogin"/>
-            <Button text="Reset" onAction="#handleReset"/>
+            <Button text="redo" onAction="#handleReset"/>
+            <Button text="Register" onAction="#handleRegister"/>
         </children>
     </HBox>
     <Label fx:id="messageLabel" GridPane.columnSpan="2" GridPane.rowIndex="3"/>

@@ -34,4 +34,10 @@ public class LoginController {
         passwordField.setText("");
         messageLabel.setText("");
     }
+
+    @FXML
+    private void handleRegister() {
+        // Handle registration logic here
+        messageLabel.setText("Registration handler not implemented yet.");
+    }
 }
