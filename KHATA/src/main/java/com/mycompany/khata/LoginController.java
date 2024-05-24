@@ -1,5 +1,6 @@
 package com.mycompany.khata;
 
+import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -18,26 +19,22 @@ public class LoginController {
 
     @FXML
     private void handleLogin() {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
-        if ("admin".equals(username) && "password".equals(password)) {
-            messageLabel.setText("Login successful!");
-            // Proceed to the next scene
-        } else {
-            messageLabel.setText("Invalid username or password");
-        }
+        // Handle login logic here
     }
 
     @FXML
     private void handleReset() {
-        usernameField.setText("");
-        passwordField.setText("");
-        messageLabel.setText("");
+        usernameField.clear();
+        passwordField.clear();
     }
 
     @FXML
     private void handleRegister() {
-        // Handle registration logic here
-        messageLabel.setText("Registration handler not implemented yet.");
+        try {
+            App.setRoot("register");
+        } catch (IOException e) {
+            e.printStackTrace();
+            messageLabel.setText("Failed to load register page.");
+        }
     }
 }
