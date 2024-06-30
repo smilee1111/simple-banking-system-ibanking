@@ -20,8 +20,8 @@
         <VBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
             <children>
                 <Label style="-fx-font-size: 20px;" text="Welcome to iBanking" />
-                <Button text="View Accounts" />
-                <Button text="Transfer Funds" />
+                 <Button layoutX="868.0" layoutY="348.0" onAction="#handleviewaccount" style="-fx-background-color: #D3D3D3;" text="view account" />
+                <Button text="Transfer Funds"  onAction="#handletransferfunds" />
                 <Button text="Transaction History" />
             </children>
         </VBox>

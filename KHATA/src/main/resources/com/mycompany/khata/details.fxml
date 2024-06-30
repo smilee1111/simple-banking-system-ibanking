@@ -11,6 +11,6 @@
       <Label layoutX="101.0" layoutY="123.0" prefHeight="34.0" prefWidth="79.0" text="Amount" />
       <Label layoutX="95.0" layoutY="166.0" prefHeight="34.0" prefWidth="85.0" text="email" />
       <Label layoutX="95.0" layoutY="218.0" prefHeight="28.0" prefWidth="85.0" text="d" />
-      <Button layoutX="256.0" layoutY="257.0" mnemonicParsing="false" text="EXIT" />
+      <Button layoutX="256.0" layoutY="257.0" mnemonicParsing="false" onAction="handleexit" text="EXIT" />
    </children>
 </AnchorPane>
