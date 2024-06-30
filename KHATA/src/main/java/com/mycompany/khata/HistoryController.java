@@ -4,8 +4,8 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 
-public class DetailsController {
-    
+public class HistoryController {
+       
     @FXML
     private void handleexit() {
         try {

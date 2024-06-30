@@ -38,25 +38,25 @@
         </VBox>
 
         <HBox alignment="CENTER_LEFT" layoutX="685.0" layoutY="361.0" prefHeight="25.0" prefWidth="294.0" spacing="10" />
-         <TextField fx:id="usernameField" layoutX="687.0" layoutY="132.0" maxWidth="200" />
+         <TextField fx:id="usernameField" layoutX="687.0" layoutY="132.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
          <Label layoutX="629.0" layoutY="136.0" text="Username:" />
-          <Button layoutX="679.0" layoutY="449.0" onAction="#handleRegister" text="Sign Up" />
-          <Button layoutX="761.0" layoutY="449.0" onAction="#handleBackToLogin" text="Back to Login" />
-          <PasswordField fx:id="confirmPasswordField" layoutX="687.0" layoutY="394.0" maxWidth="200" />
+          <Button layoutX="666.0" layoutY="449.0" onAction="#handleRegister" text="Sign Up" />
+          <Button layoutX="766.0" layoutY="449.0" onAction="#handleBackToLogin" text="Back to Login" />
+          <PasswordField fx:id="confirmPasswordField" layoutX="687.0" layoutY="394.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
           <Label layoutX="579.0" layoutY="398.0" text="Confirm Password:" />
           <Label layoutX="630.0" layoutY="345.0" prefHeight="25.0" prefWidth="53.0" text="Password:" />
           <DatePicker fx:id="dobField" layoutX="687.0" layoutY="300.0" maxWidth="200" />
           <Label layoutX="615.0" layoutY="304.0" text="Date of Birth:" />
-          <TextField fx:id="emailField" layoutX="687.0" layoutY="258.0" maxWidth="200" />
+          <TextField fx:id="emailField" layoutX="687.0" layoutY="258.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
           <Label layoutX="650.0" layoutY="262.0" text="Email:" />
-          <TextField fx:id="lastNameField" layoutX="687.0" layoutY="219.0" maxWidth="200" />
+          <TextField fx:id="lastNameField" layoutX="687.0" layoutY="219.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
           <Label layoutX="627.0" layoutY="223.0" text="Last Name:" />
-          <TextField fx:id="firstNameField" layoutX="687.0" layoutY="174.0" maxWidth="200" />
+          <TextField fx:id="firstNameField" layoutX="687.0" layoutY="174.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
           <Label layoutX="626.0" layoutY="178.0" text="First Name:" />
-          <PasswordField fx:id="passwordField" layoutX="687.0" layoutY="349.0" maxWidth="200" prefHeight="25.0" prefWidth="153.0" />
+          <PasswordField fx:id="passwordField" layoutX="687.0" layoutY="349.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
       <Label layoutX="683.0" layoutY="63.0" prefHeight="35.0" prefWidth="221.0" text="Registration Form">
          <font>
-            <Font name="System Italic" size="18.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
     </children>

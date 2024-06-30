@@ -11,38 +11,38 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="695.0" prefWidth="736.0" style="-fx-background-color: #A259FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.LoginController">
+<AnchorPane prefHeight="697.0" prefWidth="1143.0" style="-fx-background-color: #A259FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.LoginController">
     <children>
         <!-- Image on the left -->
-        <ImageView fitHeight="700" fitWidth="353.0" layoutY="-5.0">
+        <ImageView fitHeight="720.0" fitWidth="537.0" layoutX="-22.0" layoutY="-25.0">
             <image>
                 <Image url="@logor.png" />
             </image>
         </ImageView>
 
         <!-- Account No label and field -->
-        <Label layoutX="399.0" layoutY="117.0" style="-fx-text-fill: black; -fx-font-size: 14px;" text="Username" />
-        <TextField fx:id="accountNoField" layoutX="399.0" layoutY="137.0" maxWidth="234.0" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: #D3D3D3;" />
+        <Label layoutX="688.0" layoutY="125.0" prefHeight="25.0" prefWidth="72.0" style="-fx-text-fill: black; -fx-font-size: 14px;" text="Username" />
+        <TextField fx:id="accountNoField" layoutX="688.0" layoutY="164.0" maxWidth="234.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #D3D3D3;" />
 
         <!-- Password label and field -->
-        <Label layoutX="402.0" layoutY="181.0" prefHeight="20.0" prefWidth="63.0" style="-fx-text-fill: black; -fx-font-size: 14px;" text="Password" />
-        <PasswordField fx:id="passwordField" layoutX="399.0" layoutY="201.0" maxWidth="200" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: #D3D3D3;" />
-        <TextField fx:id="passwordFieldVisible" layoutX="399.0" layoutY="201.0" maxWidth="200" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: #D3D3D3;" visible="false" managed="false" />
+        <Label layoutX="688.0" layoutY="211.0" prefHeight="20.0" prefWidth="63.0" style="-fx-text-fill: black; -fx-font-size: 14px;" text="Password" />
+        <PasswordField fx:id="passwordField" layoutX="688.0" layoutY="246.0" maxWidth="220.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #D3D3D3;" />
+        <TextField fx:id="passwordFieldVisible" layoutX="688.0" layoutY="246.0" managed="false" maxWidth="200" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #D3D3D3;" visible="false" />
 
         <!-- Show Password checkbox -->
-        <CheckBox fx:id="showPasswordCheckbox" layoutX="400.0" layoutY="243.0" style="-fx-text-fill: black; -fx-font-size: 10px;" text="SHOW PASSWORD" />
+        <CheckBox fx:id="showPasswordCheckbox" layoutX="688.0" layoutY="294.0" style="-fx-text-fill: black; -fx-font-size: 10px;" text="SHOW PASSWORD" />
 
         <!-- Buttons -->
         <HBox alignment="CENTER" layoutX="350" layoutY="280" spacing="5" />
 
         <!-- Sign Up button and label -->
         <HBox alignment="CENTER_RIGHT" layoutX="350" layoutY="320" spacing="5" />
-        <Label layoutX="426.0" layoutY="371.0" prefHeight="65.0" prefWidth="206.0" style="-fx-text-fill: black; -fx-font-size: 14px;" text="----Create your khata">
+        <Label layoutX="731.0" layoutY="432.0" prefHeight="65.0" prefWidth="206.0" style="-fx-text-fill: black; -fx-font-size: 14px;" text="----Create your khata">
          <font>
             <Font name="System Bold Italic" size="72.0" />
          </font></Label>
-          <Button layoutX="529.0" layoutY="277.0" onAction="#handleReset" style="-fx-background-color: #D3D3D3;" text="Reset" />
-          <Button layoutX="382.0" layoutY="277.0" onAction="#handleLogin" style="-fx-background-color: #D3D3D3;" text="LOGIN" />
-          <Button layoutX="453.0" layoutY="277.0" onAction="#handleRegister" text="Sign Up" />
+          <Button layoutX="868.0" layoutY="348.0" onAction="#handleReset" style="-fx-background-color: #D3D3D3;" text="Reset" />
+          <Button layoutX="705.0" layoutY="348.0" onAction="#handleLogin" style="-fx-background-color: #D3D3D3;" text="LOGIN" />
+          <Button layoutX="782.0" layoutY="348.0" onAction="#handleRegister" text="Sign Up" />
     </children>
 </AnchorPane>
