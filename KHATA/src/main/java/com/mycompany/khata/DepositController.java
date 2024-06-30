@@ -9,4 +9,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 public class DepositController {
     
+    @FXML
+    private void handleexit() {
+        try {
+            App.setRoot("mainpage");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
+

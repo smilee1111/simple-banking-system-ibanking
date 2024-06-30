@@ -27,19 +27,6 @@ public class LoginController {
 
     @FXML
     private void initialize() {
-        if (passwordFieldVisible == null) {
-           int a=3;
-        } else {
-           int e=4;
-        }
-
-        if (showPasswordCheckbox == null) {
-            int a=4;
-
-        } else {
-            int v=9;
-        }
-
         passwordFieldVisible.managedProperty().bind(showPasswordCheckbox.selectedProperty());
         passwordFieldVisible.visibleProperty().bind(showPasswordCheckbox.selectedProperty());
         passwordFieldVisible.textProperty().bindBidirectional(passwordField.textProperty());
@@ -55,7 +42,7 @@ public class LoginController {
 
         if (isValidLogin(accountNo, password)) {
             try {
-                App.setRoot("/com/mycompany/khata/mainpage.fxml");
+                App.setRoot("mainpage");
             } catch (IOException e) {
                 e.printStackTrace();
                 messageLabel.setText("Failed to load main page.");
@@ -79,7 +66,7 @@ public class LoginController {
     @FXML
     private void handleRegister(ActionEvent event) {
         try {
-            App.setRoot("/com/mycompany/khata/register.fxml");
+            App.setRoot("register");
         } catch (IOException e) {
             e.printStackTrace();
             messageLabel.setText("Error loading register page");

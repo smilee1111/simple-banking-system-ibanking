@@ -2,16 +2,9 @@ package com.mycompany.khata;
 
 import java.io.IOException;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-public class InformationController {
-
-    @FXML
-    void handlemMainPage(ActionEvent event) {
-
-    }
-
+public class DetailsController {
     
     @FXML
     private void handleexit() {
@@ -21,5 +14,4 @@ public class InformationController {
             e.printStackTrace();
         }
     }
-
 }
