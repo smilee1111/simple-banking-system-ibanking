@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.mycompany.khata.App",
+            "projectName": "khata",
+            "vmArgs": "--module-path \"C:\\Users\\Kishor's Laptop\\OneDrive\\Desktop\\javafx-sdk-22.0.1\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "com.mycompany.khata.App",
+            "projectName": "khata",
+            "vmArgs": "--module-path \"C:\\Users\\Kishor's Laptop\\OneDrive\\Desktop\\javafx-sdk-22.0.1\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
+``

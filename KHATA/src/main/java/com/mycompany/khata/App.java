@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
-import javafx.scene.layout.VBox; 
-import javafx.scene.paint.Color;
 
 import java.io.IOException;
 
@@ -15,20 +13,14 @@ public class App extends Application {
     private static Scene scene;
 
     @Override
-    public void start(Stage stage) {
-        try {
-            scene = new Scene(loadFXML("login"), 640, 480);
-            stage.setScene(scene);
-            
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.err.println("Failed to load FXML file: " + e.getMessage());
-        }
+    public void start(Stage stage) throws IOException {
+        scene = new Scene(loadFXML("/com/mycompany/khata/login"), 640, 480);
+        stage.setScene(scene);
+        stage.show();
     }
 
     static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+        scene.setRoot(loadFXML("/com/mycompany/khata/" + fxml));
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

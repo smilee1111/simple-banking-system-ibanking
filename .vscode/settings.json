@@ -1,0 +1,15 @@
+{
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "C:\\Program Files\\java\\jdk 22",
+            "default": true
+        }
+    ],
+    "java.jdt.ls.java.home": "C:\\Program Files\\java\\jdk 22",
+    "java.home": "C:\\Program Files\\java\\jdk 22",
+    "java.project.referencedLibraries": [
+        "C:\\Users\\Kishor's Laptop\\OneDrive\\Desktop\\javafx-sdk-22.0.1\\lib\\*.jar"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
