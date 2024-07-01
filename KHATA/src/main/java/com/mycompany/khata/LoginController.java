@@ -17,6 +17,9 @@ public class LoginController {
     private PasswordField passwordField;
 
     @FXML
+    private Label LoginMessageLabel;
+
+    @FXML
     private TextField passwordFieldVisible;
 
     @FXML
@@ -39,8 +42,11 @@ public class LoginController {
     private void handleLogin(ActionEvent event) {
         String accountNo = accountNoField.getText();
         String password = passwordField.getText();
-
-        if (isValidLogin(accountNo, password)) {
+        
+        if(accountNoField.getText().isBlank()==true || passwordField.getText().isBlank()==true){
+            LoginMessageLabel.setText("Enter Username or Password");
+            return;
+        }else if (isValidLogin(accountNo, password)) {
             try {
                 App.setRoot("mainpage");
             } catch (IOException e) {
@@ -48,7 +54,7 @@ public class LoginController {
                 messageLabel.setText("Failed to load main page.");
             }
         } else {
-            messageLabel.setText("Invalid account number or password.");
+            LoginMessageLabel.setText("Invalid Username or Password.");
         }
     }
 

@@ -8,27 +8,34 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.MainPageController">
+<AnchorPane prefHeight="610.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.MainPageController">
     <children>
         <HBox alignment="TOP_RIGHT" spacing="20" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <children>
-                <Label style="-fx-font-size: 24px;" text="iBanking" />
-                <Label text="Saw Ye Maw" />
-                <Button text="Logout" />
+                <Label prefHeight="23.0" prefWidth="79.0" text="See You Again" />
+                <Button onAction="#handlelogout" text="Logout" />
             </children>
         </HBox>
-        <VBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+        <VBox alignment="CENTER" layoutX="14.0" layoutY="158.0" prefHeight="260.0" prefWidth="209.0" spacing="10" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="563.0" AnchorPane.topAnchor="158.0">
             <children>
                 <Label style="-fx-font-size: 20px;" text="Welcome to iBanking" />
-                 <Button layoutX="868.0" layoutY="348.0" onAction="#handleviewaccount" style="-fx-background-color: #D3D3D3;" text="view account" />
-                <Button text="Transfer Funds"  onAction="#handletransferfunds" />
-                <Button text="Transaction History" />
+            <Button mnemonicParsing="false" onAction="#handledetails" prefHeight="25.0" prefWidth="130.0" text="Account Details" />
+            <Button mnemonicParsing="false" onAction="#handledeposit" prefHeight="25.0" prefWidth="122.0" text="Deposit Cash" />
+            <Button mnemonicParsing="false" onAction="#handlewithdraw" prefHeight="25.0" prefWidth="124.0" text="Withdraw Cash" />
+                <Button onAction="#handletransferfunds" prefHeight="25.0" prefWidth="125.0" text="Transfer money" />
+                <Button onAction="#handlehistory" prefHeight="25.0" prefWidth="124.0" text="Transaction History" />
             </children>
         </VBox>
-        <ImageView fx:id="bankLogo" fitHeight="100" fitWidth="200" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-            <image>
-            <Image url="@details.png" />
-            </image>
-        </ImageView>
+          <Label layoutX="347.0" layoutY="41.0" style="-fx-font-size: 24px;" text="iBanking" />
+      <Button layoutX="306.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleinformation" prefHeight="83.0" prefWidth="112.0">
+         <graphic>
+            <ImageView fitHeight="81.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@information.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="578.0" layoutY="258.0" mnemonicParsing="false" text="Button" />
     </children>
 </AnchorPane>

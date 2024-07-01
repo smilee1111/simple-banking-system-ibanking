@@ -44,5 +44,11 @@
           <Button layoutX="868.0" layoutY="348.0" onAction="#handleReset" style="-fx-background-color: #D3D3D3;" text="Reset" />
           <Button layoutX="705.0" layoutY="348.0" onAction="#handleLogin" style="-fx-background-color: #D3D3D3;" text="LOGIN" />
           <Button layoutX="782.0" layoutY="348.0" onAction="#handleRegister" text="Sign Up" />
+      <Label layoutX="688.0" layoutY="50.0" prefHeight="33.0" prefWidth="220.0" text="Secure Login">
+         <font>
+            <Font name="Verdana Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="LoginMessageLabel" alignment="CENTER" layoutX="708.0" layoutY="95.0" prefHeight="17.0" prefWidth="206.0" />
     </children>
 </AnchorPane>

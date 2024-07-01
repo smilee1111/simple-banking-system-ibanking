@@ -18,9 +18,25 @@ public class MainPageController{
     private ImageView bankLogo;
 
     @FXML
-    private void handleviewaccount(ActionEvent event) {
+    private void handledetails(ActionEvent event) {
         try {
             App.setRoot("details");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void handledeposit(ActionEvent event) {
+        try {
+            App.setRoot("deposit");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void handlewithdraw(ActionEvent event) {
+        try {
+            App.setRoot("withdraw");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -33,4 +49,32 @@ public class MainPageController{
             e.printStackTrace();
         }
     }
-}
+    @FXML
+    private void handlehistory(ActionEvent event) {
+        try {
+            App.setRoot("history");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void handleinformation(ActionEvent event) {
+        try {
+            App.setRoot("information");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void handlelogout() {
+        try {
+            App.setRoot("login");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        }
+   
+        
+    }
+

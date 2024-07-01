@@ -11,12 +11,10 @@ public class InformationController {
     void handlemMainPage(ActionEvent event) {
 
     }
-
-    
     @FXML
     private void handleexit() {
         try {
-            App.setRoot("login");
+            App.setRoot("mainpage");
         } catch (IOException e) {
             e.printStackTrace();
         }
