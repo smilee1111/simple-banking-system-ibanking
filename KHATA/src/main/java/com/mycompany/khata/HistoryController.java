@@ -7,8 +7,8 @@ import javafx.fxml.FXML;
 
 public class HistoryController {
        
-    @FXML
-    private void handleexit(ActionEvent event) {
+        @FXML
+    private void handleexit() {
         try {
             App.setRoot("mainpage");
         } catch (IOException e) {

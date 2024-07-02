@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 
 public class DetailsController {
     
-    @FXML
+       @FXML
     private void handleexit() {
         try {
             App.setRoot("mainpage");

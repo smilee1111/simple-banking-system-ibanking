@@ -6,11 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 public class InformationController {
-
-    @FXML
-    void handlemMainPage(ActionEvent event) {
-
-    }
     @FXML
     private void handleexit() {
         try {
