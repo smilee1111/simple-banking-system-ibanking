@@ -33,16 +33,32 @@ public class RegisterController {
     @FXML
     private Label RegisterMessageLabel;
       
-
     @FXML
     private void handleRegister() {
-           // Handle registration logic here
-        if(usernameField.getText().isBlank()==true && firstNameField.getText().isBlank()==true && lastNameField.getText().isBlank()==true && emailField.getText().isBlank()==true && passwordField.getText().isBlank()==true && confirmPasswordField.getText().isBlank()==true) {
+        // Check if any field is blank and set the appropriate message
+        if (usernameField.getText().isBlank() || 
+            firstNameField.getText().isBlank() || 
+            lastNameField.getText().isBlank() || 
+            emailField.getText().isBlank() || 
+            passwordField.getText().isBlank() || 
+            confirmPasswordField.getText().isBlank()) {
+            
             RegisterMessageLabel.setText("Fill all the information");
+            return;
         }
+    
         // Handle registration logic here
+        // For example, you can check if the passwords match
+        if (!passwordField.getText().equals(confirmPasswordField.getText())) {
+            RegisterMessageLabel.setText("Passwords do not match");
+            return;
+        }
+    
+        // If all fields are filled and passwords match, proceed with registration
+        RegisterMessageLabel.setText("Registration successful");
+        // Add your registration logic here
     }
-
+    
     @FXML
     private void handleBackToLogin() {
         try {

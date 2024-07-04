@@ -67,6 +67,7 @@ public class LoginController {
         accountNoField.clear();
         passwordField.clear();
         passwordFieldVisible.clear();
+        LoginMessageLabel.setText("");  // Clear the login message label
     }
 
     @FXML
@@ -75,7 +76,6 @@ public class LoginController {
             App.setRoot("register");
         } catch (IOException e) {
             e.printStackTrace();
-            messageLabel.setText("Error loading register page");
         }
     }
 }

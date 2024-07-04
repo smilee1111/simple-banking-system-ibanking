@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,9 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane style="-fx-background-color: #A259FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.RegisterController">
+<AnchorPane prefHeight="786.0" prefWidth="1372.0" style="-fx-background-color: #402565;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.RegisterController">
     <children>
-        <ImageView fitHeight="708.0" fitWidth="525.0" layoutX="8.0">
+        <ImageView fitHeight="797.0" fitWidth="595.0" layoutX="-3.0">
             <image>
                 <Image url="@logor.png" />
             </image>
@@ -37,32 +36,86 @@
             <HBox alignment="CENTER" spacing="10" />
         </VBox>
 
-        <HBox alignment="CENTER_LEFT" layoutX="685.0" layoutY="361.0" prefHeight="25.0" prefWidth="294.0" spacing="10" />
-         <TextField fx:id="usernameField" layoutX="687.0" layoutY="132.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
-         <Label layoutX="629.0" layoutY="136.0" text="Username:" />
-          <Button layoutX="666.0" layoutY="449.0" onAction="#handleRegister" text="Sign Up" />
-          <Button layoutX="766.0" layoutY="449.0" onAction="#handleBackToLogin" text="Back to Login" />
-          <PasswordField fx:id="confirmPasswordField" layoutX="687.0" layoutY="394.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
-          <Label layoutX="579.0" layoutY="398.0" text="Confirm Password:" />
-          <Label layoutX="630.0" layoutY="345.0" prefHeight="25.0" prefWidth="53.0" text="Password:" />
-          <DatePicker fx:id="dobField" layoutX="687.0" layoutY="300.0" maxWidth="200" />
-          <Label layoutX="615.0" layoutY="304.0" text="Date of Birth:" />
-          <TextField fx:id="emailField" layoutX="687.0" layoutY="258.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
-          <Label layoutX="650.0" layoutY="262.0" text="Email:" />
-          <TextField fx:id="lastNameField" layoutX="687.0" layoutY="219.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
-          <Label layoutX="627.0" layoutY="223.0" text="Last Name:" />
-          <TextField fx:id="firstNameField" layoutX="687.0" layoutY="174.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
-          <Label layoutX="626.0" layoutY="178.0" text="First Name:" />
-          <PasswordField fx:id="passwordField" layoutX="687.0" layoutY="349.0" maxWidth="200" prefHeight="25.0" prefWidth="174.0" />
-      <Label layoutX="681.0" layoutY="50.0" prefHeight="35.0" prefWidth="221.0" text="Registration Form">
+        <HBox alignment="CENTER_LEFT" layoutX="711.0" layoutY="361.0" prefHeight="30.0" prefWidth="268.0" spacing="10" />
+         <Label layoutX="789.0" layoutY="136.0" text="Username:" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+          <Button layoutX="955.0" layoutY="572.0" onAction="#handleRegister" prefHeight="46.0" prefWidth="159.0" text="Sign Up" textFill="#33366f">
          <font>
             <Font name="System Bold Italic" size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="RegisterMessageLabel" layoutX="671.0" layoutY="93.0" prefHeight="17.0" prefWidth="207.0" textAlignment="CENTER" textFill="#3e28cd">
+         </font></Button>
+          <Button layoutX="1081.0" layoutY="642.0" onAction="#handleBackToLogin" prefHeight="46.0" prefWidth="153.0" text="Back to Login" textFill="#2a3865">
          <font>
-            <Font name="Verdana Italic" size="12.0" />
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+          <Label layoutX="712.0" layoutY="502.0" text="Confirm Password:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+          <DatePicker fx:id="dobField" layoutX="902.0" layoutY="372.0" maxWidth="284.0" prefHeight="39.0" prefWidth="284.0" />
+          <TextField fx:id="emailField" layoutX="902.0" layoutY="313.0" maxWidth="284.0" prefHeight="39.0" prefWidth="284.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></TextField>
+          <Label layoutX="818.0" layoutY="319.0" text="Email:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+          <Label layoutX="786.0" layoutY="256.0" text="Last Name:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="913.0" layoutY="33.0" prefHeight="35.0" prefWidth="221.0" text="Registration Form" textFill="#c99c9c">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
+      <Label layoutX="763.0" layoutY="385.0" text="Date of Birth:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="793.0" layoutY="437.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField1" layoutX="902.0" layoutY="496.0" maxWidth="284.0" prefHeight="39.0" prefWidth="284.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="emailField2" layoutX="902.0" layoutY="431.0" maxWidth="284.0" prefHeight="39.0" prefWidth="284.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="emailField3" layoutX="902.0" layoutY="250.0" maxWidth="284.0" prefHeight="39.0" prefWidth="284.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="emailField31" layoutX="902.0" layoutY="193.0" maxWidth="284.0" prefHeight="39.0" prefWidth="284.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="emailField311" layoutX="902.0" layoutY="130.0" maxWidth="284.0" prefHeight="39.0" prefWidth="284.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="785.0" layoutY="199.0" text="First Name:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="821.0" layoutY="653.0" prefHeight="23.0" prefWidth="268.0" text="Already have a account---" textFill="#7c6f6f">
+         <font>
+            <Font name="Verdana Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="RegisterMessageLabel" layoutX="888.0" layoutY="80.0" prefHeight="27.0" prefWidth="318.0" textFill="#9a1313" />
     </children>
 </AnchorPane>
