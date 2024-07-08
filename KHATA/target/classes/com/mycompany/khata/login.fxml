@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="816.0" prefWidth="1380.0" style="-fx-background-color: #402565;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.LoginController">
+<AnchorPane prefHeight="816.0" prefWidth="1380.0" style="-fx-background-color: #6a529e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.LoginController">
     <children>
         <!-- Image on the left -->
         <ImageView fitHeight="909.0" fitWidth="630.0" layoutX="-10.0" layoutY="-94.0">
@@ -69,7 +69,7 @@
                 <Font name="System Bold Italic" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="838.0" layoutY="294.0" prefHeight="17.0" prefWidth="105.0" text="Password" textFill="#ebebeb">
+        <Label layoutX="838.0" layoutY="294.0" prefHeight="17.0" prefWidth="105.0" text="Password" textFill="WHITE">
             <font>
                 <Font name="System Bold Italic" size="18.0" />
             </font>

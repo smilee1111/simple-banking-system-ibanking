@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,27 +11,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="969.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.DepositController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.DepositController">
    <children>
-      <Label layoutX="167.0" layoutY="120.0" prefHeight="25.0" prefWidth="34.0" text="date" />
-      <Label layoutX="217.0" layoutY="56.0" prefHeight="25.0" prefWidth="160.0" text="depsit form">
+      <Label layoutX="417.0" layoutY="130.0" prefHeight="25.0" prefWidth="34.0" text="date" />
+      <Label layoutX="487.0" layoutY="73.0" prefHeight="25.0" prefWidth="160.0" text="deposit form">
          <font>
-            <Font name="System Bold Italic" size="24.0" /> 
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="121.0" layoutY="167.0" prefHeight="34.0" prefWidth="92.0" text=" deposit amount" />
-      <DatePicker layoutX="213.0" layoutY="120.0" />
-      <TextField layoutX="213.0" layoutY="171.0" />
-      <Button fx:id="confirmbutton" layoutX="200.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleconfirm" prefHeight="25.0" prefWidth="70.0" text="confirm" />
-      <Button layoutX="335.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="25.0" prefWidth="81.0" text="Exit" />
-      <VBox alignment="CENTER" layoutX="491.0" layoutY="79.0" prefHeight="442.0" prefWidth="232.0">
+      <Label layoutX="371.0" layoutY="178.0" prefHeight="34.0" prefWidth="92.0" text=" deposit amount" />
+      <DatePicker layoutX="480.0" layoutY="130.0" />
+      <TextField layoutX="480.0" layoutY="182.0" />
+      <Button fx:id="confirmbutton" layoutX="418.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleconfirm" prefHeight="25.0" prefWidth="70.0" text="confirm" />
+      <Button layoutX="568.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="25.0" prefWidth="81.0" text="Exit" />
+      <VBox alignment="CENTER" layoutX="24.0" layoutY="48.0" prefHeight="410.0" prefWidth="232.0">
          <children>
             <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking">
                <font>
                   <Font name="System Bold Italic" size="22.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#handledetails" prefHeight="61.0" prefWidth="230.0" text="Account Details">
+            <Button mnemonicParsing="false" onAction="#handledetail" prefHeight="61.0" prefWidth="230.0" text="Account Details">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -92,5 +93,9 @@
             </Button>
          </children>
       </VBox>
+      <TextField layoutX="493.0" layoutY="228.0" />
+      <Label layoutX="409.0" layoutY="282.0" text="password" />
+      <Label layoutX="409.0" layoutY="232.0" text="Username" />
+      <PasswordField layoutX="505.0" layoutY="278.0" />
    </children>
 </AnchorPane>

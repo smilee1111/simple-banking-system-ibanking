@@ -11,5 +11,6 @@
     "java.project.referencedLibraries": [
         "C:\\Users\\Kishor's Laptop\\OneDrive\\Desktop\\javafx-sdk-22.0.1\\lib\\*.jar"
     ],
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable"
 }

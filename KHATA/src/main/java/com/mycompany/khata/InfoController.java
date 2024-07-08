@@ -4,16 +4,16 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
 public class InfoController {
 
-
-        @FXML
+    @FXML
     void handleexit(ActionEvent event) {
-          try {
+        try{
             App.setRoot("mainpage");
-        } catch (IOException e) {
+        }catch (IOException e){
             e.printStackTrace();
+
         }
+       
     }
 }
