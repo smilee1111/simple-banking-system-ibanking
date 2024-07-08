@@ -7,11 +7,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="721.0" prefWidth="1278.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.MainPageController">
+<AnchorPane prefHeight="721.0" prefWidth="1278.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.MainPageController">
     <children>
-        <HBox alignment="TOP_RIGHT" spacing="20" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0">
+        <HBox alignment="TOP_RIGHT" layoutX="785.0" layoutY="33.0" prefHeight="36.0" prefWidth="436.0" spacing="20" AnchorPane.leftAnchor="785.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="33.0">
             <children>
             <Label prefHeight="36.0" prefWidth="98.0" text="See You Again">
                <font>
@@ -24,56 +25,73 @@
                </font></Button>
             </children>
         </HBox>
-        <VBox alignment="CENTER" layoutX="14.0" layoutY="163.0" prefHeight="442.0" prefWidth="232.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="1032.0" AnchorPane.topAnchor="163.0">
+        <VBox alignment="CENTER" layoutX="21.0" layoutY="247.0" prefHeight="410.0" prefWidth="232.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="1025.0" AnchorPane.topAnchor="247.0">
             <children>
             <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking">
                <font>
                   <Font name="System Bold Italic" size="22.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#handledetails" prefHeight="61.0" prefWidth="234.0" text="Account Details">
+            <Button mnemonicParsing="false" onAction="#handledetail" prefHeight="61.0" prefWidth="230.0" text="Account Details">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@details.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
-            <Button mnemonicParsing="false" onAction="#handledeposit" prefHeight="53.0" prefWidth="229.0" text="Deposit Cash">
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#handledeposit" prefHeight="53.0" prefWidth="230.0" text="Deposit Cash">
                <graphic>
                   <ImageView fitHeight="43.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@deposit.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
-            <Button mnemonicParsing="false" onAction="#handlewithdraw" prefHeight="61.0" prefWidth="232.0" text="Withdraw Cash">
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#handlewithdraw" prefHeight="65.0" prefWidth="230.0" text="Withdraw Cash">
                <graphic>
                   <ImageView fitHeight="38.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@withdraw.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
-                <Button onAction="#handletransferfunds" prefHeight="64.0" prefWidth="232.0" text="Transfer Cash">
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#handletransferfunds" prefHeight="64.0" prefWidth="230.0" text="Transfer Cash">
                <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="41.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@transfer.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
-                <Button onAction="#handlehistory" prefHeight="65.0" prefWidth="229.0" text="Transaction History">
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlehistory" prefHeight="65.0" prefWidth="230.0" text="Transaction History">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
                <graphic>
-                  <ImageView fitHeight="36.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="28.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@history.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
+               </graphic>
+            </Button>
             </children>
         </VBox>
-      <Button layoutX="1012.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleinformation" prefHeight="111.0" prefWidth="153.0">
+      <Button layoutX="1012.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleinfo" prefHeight="111.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
          <graphic>
             <ImageView fitHeight="81.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -82,7 +100,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="422.0" layoutY="493.0" onAction="#handletransferfunds" prefHeight="111.0" prefWidth="153.0">
+      <Button layoutX="422.0" layoutY="493.0" onAction="#handletransferfunds" prefHeight="111.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
          <graphic>
             <ImageView fitHeight="96.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -91,16 +109,16 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="1012.0" layoutY="266.0" onAction="#handlewithdraw" prefHeight="113.0" prefWidth="153.0">
+      <Button layoutX="1012.0" layoutY="266.0" onAction="#handlewithdraw" prefHeight="113.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
          <graphic>
-            <ImageView fitHeight="105.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="105.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@withdraw.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="719.0" layoutY="266.0" onAction="#handledeposit" prefHeight="113.0" prefWidth="153.0">
+      <Button layoutX="719.0" layoutY="266.0" onAction="#handledeposit" prefHeight="113.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
          <graphic>
             <ImageView fitHeight="122.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -109,7 +127,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="422.0" layoutY="267.0" mnemonicParsing="false" onAction="#handledetails" prefHeight="113.0" prefWidth="153.0">
+      <Button layoutX="422.0" layoutY="267.0" onAction="#handledetail" prefHeight="113.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
          <graphic>
             <ImageView fitHeight="117.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -118,7 +136,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="726.0" layoutY="492.0" onAction="#handletransferfunds" prefHeight="113.0" prefWidth="153.0">
+      <Button layoutX="726.0" layoutY="492.0" onAction="#handletransferfunds" prefHeight="113.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
          <graphic>
             <ImageView fitHeight="65.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -132,5 +150,21 @@
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Label>
+      <Label layoutX="334.0" layoutY="192.0" prefHeight="32.0" prefWidth="901.0" style="-fx-background-color: #a2d78a;" text="Account Selected" textFill="#434343">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Circle fill="WHITE" layoutX="175.0" layoutY="124.0" radius="80.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="127.0" layoutY="214.0" prefHeight="20.0" prefWidth="130.0" text="Profile Image" textFill="#3e3f54">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="98.0" fitWidth="121.0" layoutX="120.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@profiledefault.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

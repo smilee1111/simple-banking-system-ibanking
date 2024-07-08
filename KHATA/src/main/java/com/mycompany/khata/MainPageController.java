@@ -18,9 +18,9 @@ public class MainPageController{
     private ImageView bankLogo;
 
     @FXML
-    private void handledetails(ActionEvent event) {
+    private void handledetail(ActionEvent event) {
         try {
-            App.setRoot("details");
+            App.setRoot("detail");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -58,9 +58,9 @@ public class MainPageController{
         }
     }
     @FXML
-    private void handleinformation(ActionEvent event) {
+    private void handleinfo(ActionEvent event) {
         try {
-            App.setRoot("information");
+            App.setRoot("info");
         } catch (IOException e) {
             e.printStackTrace();
         }

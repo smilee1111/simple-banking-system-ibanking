@@ -5,14 +5,15 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-public class InformationController {
-    @FXML
-    private void handleexit() {
-        try {
+public class InfoController {
+
+
+        @FXML
+    void handleexit(ActionEvent event) {
+          try {
             App.setRoot("mainpage");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }

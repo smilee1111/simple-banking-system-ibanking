@@ -1,17 +1,19 @@
 package com.mycompany.khata;
+import javafx.fxml.FXML;
 
 import java.io.IOException;
 
-import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
 
-public class DetailsController {
-    
-       @FXML
-    private void handleexit() {
-        try {
+public class DetailController {
+
+    @FXML
+    void handleexit(ActionEvent event) {
+         try {
             App.setRoot("mainpage");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }

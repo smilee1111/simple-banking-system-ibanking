@@ -20,57 +20,43 @@
             </image>
         </ImageView>
 
-        <!-- Username field -->
-        <TextField fx:id="accountNoField" layoutX="842.0" layoutY="223.0" prefHeight="46.0" prefWidth="269.0" promptText="Username" style="-fx-background-color: #D3D3D3; -fx-font-weight: bold;">
-            <font>
-                <Font name="Cambria Bold" size="18.0" />
-            </font>
-        </TextField>
-
-        <!-- Password fields -->
-        <PasswordField fx:id="passwordField" layoutX="838.0" layoutY="323.0" prefHeight="46.0" prefWidth="269.0" promptText="Password" style="-fx-background-color: #D3D3D3; -fx-font-weight: bold;">
+        <!-- Overlapping PasswordField and TextField -->
+        <PasswordField fx:id="passwordField" layoutX="838.0" layoutY="321.0" prefHeight="46.0" prefWidth="269.0" promptText="Password">
             <font>
                 <Font name="System Bold Italic" size="18.0" />
             </font>
         </PasswordField>
-
-        <TextField fx:id="passwordFieldVisible" layoutX="842.0" layoutY="307.0" prefHeight="39.0" prefWidth="220.0" promptText="Password" style="-fx-background-color: #D3D3D3; -fx-font-weight: bold;" visible="false">
+        <TextField fx:id="passwordFieldVisible" layoutX="838.0" layoutY="321.0" prefHeight="46.0" prefWidth="269.0" promptText="Password" style="-fx-background-color: #D3D3D3; -fx-font-weight: bold;" visible="false">
             <font>
                 <Font name="System Bold Italic" size="18.0" />
             </font>
         </TextField>
-
-        <!-- Show Password checkbox -->
-        <CheckBox fx:id="showPasswordCheckbox" layoutX="867.0" layoutY="395.0" prefHeight="27.0" prefWidth="200.0" style="-fx-text-fill: black; -fx-font-size: 18px; -fx-font-weight: bold;" text="SHOW PASSWORD" textFill="#404040">
-         <font>
-            <Font name="System Bold Italic" size="14.0" />
-         </font></CheckBox>
 
         <!-- Buttons -->
         <HBox alignment="CENTER" layoutX="350" layoutY="280" spacing="5" />
 
         <!-- Sign Up button and label -->
         <HBox alignment="CENTER_RIGHT" layoutX="350" layoutY="320" spacing="5" />
-        <Button layoutX="1034.0" layoutY="436.0" onAction="#handleReset" prefHeight="46.0" prefWidth="113.0" style="-fx-background-color: #b19cd9;" text="Reset" textFill="#3c245e">
+        <Button layoutX="1032.0" layoutY="443.0" onAction="#handleReset" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #b19cd9;" text="Reset" textFill="#3c245e">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <Button layoutX="834.0" layoutY="436.0" onAction="#handleLogin" prefHeight="46.0" prefWidth="113.0" style="-fx-background-color: #b19cd9;" text="LOGIN" textFill="#402565">
+        <Button layoutX="817.0" layoutY="443.0" onAction="#handleLogin" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #b19cd9;" text="LOGIN" textFill="#402565">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <Button layoutX="887.0" layoutY="554.0" onAction="#handleRegister" prefHeight="46.0" prefWidth="113.0" style="-fx-background-color: #b19cd9;" text="Sign Up" textFill="#402565">
+        <Button layoutX="885.0" layoutY="554.0" onAction="#handleRegister" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #b19cd9;" text="Sign Up" textFill="#402565">
             <font>
                 <Font name="System Bold Italic" size="18.0" />
             </font>
         </Button>
 
         <!-- Labels -->
-        <Label layoutX="845.0" layoutY="78.0" prefHeight="68.0" prefWidth="296.0" text="Secure Login" textFill="#b59898">
+        <Label alignment="CENTER" layoutX="803.0" layoutY="70.0" prefHeight="68.0" prefWidth="323.0" text="Secure Login" textFill="#b59898">
             <font>
-                <Font name="Verdana Bold Italic" size="36.0" />
+                <Font name="Verdana Bold Italic" size="39.0" />
             </font>
         </Label>
         <Label fx:id="LoginMessageLabel" alignment="CENTER" layoutX="842.0" layoutY="157.0" prefHeight="27.0" prefWidth="283.0" textFill="#c90a0a">
@@ -88,10 +74,20 @@
                 <Font name="System Bold Italic" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="1003.0" layoutY="554.0" prefHeight="46.0" prefWidth="188.0" text="---Create Your Own KHATA" textFill="WHITE">
+        <Label layoutX="1007.0" layoutY="551.0" prefHeight="39.0" prefWidth="237.0" text="---Create Your Own KHATA" textFill="WHITE">
             <font>
-                <Font size="14.0" />
+                <Font name="System Bold" size="16.0" />
             </font>
         </Label>
+      <CheckBox fx:id="showPasswordCheckbox" layoutX="838.0" layoutY="395.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="269.0" text="Show Password" textFill="#dddddd">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="accountNoField" layoutX="838.0" layoutY="223.0" prefHeight="46.0" prefWidth="269.0" promptText="Username">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
     </children>
 </AnchorPane>

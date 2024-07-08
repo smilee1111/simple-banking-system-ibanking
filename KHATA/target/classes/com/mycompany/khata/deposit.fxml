@@ -4,10 +4,13 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.DepositController">
+<AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="969.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.DepositController">
    <children>
       <Label layoutX="167.0" layoutY="120.0" prefHeight="25.0" prefWidth="34.0" text="date" />
       <Label layoutX="217.0" layoutY="56.0" prefHeight="25.0" prefWidth="160.0" text="depsit form">
@@ -18,7 +21,76 @@
       <Label layoutX="121.0" layoutY="167.0" prefHeight="34.0" prefWidth="92.0" text=" deposit amount" />
       <DatePicker layoutX="213.0" layoutY="120.0" />
       <TextField layoutX="213.0" layoutY="171.0" />
-      <Button layoutX="200.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="confirm" />
-      <Button layoutX="335.0" layoutY="230.0" onAction="#handleexit"  mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Exit" />
+      <Button fx:id="confirmbutton" layoutX="200.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleconfirm" prefHeight="25.0" prefWidth="70.0" text="confirm" />
+      <Button layoutX="335.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="25.0" prefWidth="81.0" text="Exit" />
+      <VBox alignment="CENTER" layoutX="491.0" layoutY="79.0" prefHeight="442.0" prefWidth="232.0">
+         <children>
+            <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#handledetails" prefHeight="61.0" prefWidth="230.0" text="Account Details">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@details.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handledeposit" prefHeight="53.0" prefWidth="230.0" text="Deposit Cash">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@deposit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlewithdraw" prefHeight="65.0" prefWidth="230.0" text="Withdraw Cash">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@withdraw.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handletransferfunds" prefHeight="64.0" prefWidth="230.0" text="Transfer Cash">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@transfer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlehistory" prefHeight="65.0" prefWidth="230.0" text="Transaction History">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@history.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

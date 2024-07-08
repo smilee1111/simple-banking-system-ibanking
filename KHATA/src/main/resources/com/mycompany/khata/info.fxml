@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Button layoutX="249.0" layoutY="298.0" mnemonicParsing="false" text="Update" textFill="#252323" />
+            <Label layoutX="167.0" layoutY="89.0" prefHeight="17.0" prefWidth="79.0" text="Username" />
+            <Label layoutX="152.0" layoutY="204.0" prefHeight="17.0" prefWidth="89.0" text="date of birth" />
+            <Label layoutX="187.0" layoutY="248.0" prefHeight="17.0" prefWidth="46.0" text="email" />
+            <Label layoutX="166.0" layoutY="126.0" prefHeight="17.0" prefWidth="79.0" text="First name" />
+            <Label layoutX="172.0" layoutY="163.0" prefHeight="17.0" prefWidth="66.0" text="last name" />
+            <TextField layoutX="248.0" layoutY="85.0" />
+            <TextField layoutX="248.0" layoutY="122.0" />
+            <TextField layoutX="248.0" layoutY="159.0" />
+            <TextField layoutX="248.0" layoutY="244.0" />
+            <Button layoutX="341.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="25.0" prefWidth="40.0" text="Exit" />
+            <Label layoutX="205.0" layoutY="25.0" prefHeight="40.0" prefWidth="235.0" text="Personal Info">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <DatePicker layoutX="250.0" layoutY="200.0" prefHeight="25.0" prefWidth="149.0" />
+         </children>
+      </AnchorPane>
+      <CheckBox mnemonicParsing="false" text="CheckBox" />
+   </children>
+</AnchorPane>
