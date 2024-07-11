@@ -117,6 +117,10 @@ public class WithdrawController {
                         ae -> withdrawmessagelabel.setText("")
                     ));
                     timeline.play();
+                    withdrawField.clear();
+                    usernameField.clear();
+                    passwordField.clear();
+                    dateField.setValue(null);
                 };
         }
 

@@ -103,18 +103,16 @@ public class DepositController {
   
         if (alert.showAndWait().get() == ButtonType.OK) {
                     depositmessagelabel.setText("Deposit Successful");
-                    depositField.clear();
-                    usernameField.clear();
-                    passwordField.clear();
-                    
-                    
-                  
                     Timeline timeline = new Timeline(new KeyFrame(
                         Duration.millis(2000), 
                         ae -> depositmessagelabel.setText("")
                         
                     ));
                     timeline.play();
+                    depositField.clear();
+                    usernameField.clear();
+                    passwordField.clear();
+                    dateField.setValue(null);
                 };
         }
    

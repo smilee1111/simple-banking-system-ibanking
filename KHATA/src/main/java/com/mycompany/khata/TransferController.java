@@ -115,13 +115,16 @@ public class TransferController {
 
           if (alert.showAndWait().get() == ButtonType.OK) {
             transfermessagelabel.setText("transfer Successful");
-                    
-                    // Clear the message after 2 seconds
                     Timeline timeline = new Timeline(new KeyFrame(
                         Duration.millis(2000),
                         ae -> transfermessagelabel.setText("")
                     ));
                     timeline.play();
+                    transferamount.clear();
+                    usernameField.clear();
+                    passwordField.clear();
+                    dateField.setValue(null);
+                    receiversaccountcode.clear();
                 };
        
         }
