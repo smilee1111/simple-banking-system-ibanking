@@ -23,7 +23,7 @@ public class DepositController {
     private TextField usernameField;
 
     @FXML
-    private TextField depositField; // Ensure this matches the FXML
+    private TextField depositField; 
 
     @FXML
     private PasswordField passwordField;
@@ -89,12 +89,13 @@ public class DepositController {
     private void handleconfirmDeposit(ActionEvent event) {
         if (usernameField.getText().isBlank() || 
             passwordField.getText().isBlank() || 
-            depositField.getText().isBlank()  ) {
+            depositField.getText().isBlank() ||
+            dateField.getValue()==null ) {
             depositmessagelabel.setText("Fill all the information");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
             ae -> depositmessagelabel.setText("")));
             atimeline.play();
-            return;  // Stop further execution if fields are blank
+            return; 
         }
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Deposit Confirm");
@@ -107,9 +108,9 @@ public class DepositController {
                     passwordField.clear();
                     
                     
-                    // Clear the message after 2 seconds
+                  
                     Timeline timeline = new Timeline(new KeyFrame(
-                        Duration.millis(3000), // 2000 milliseconds = 2 seconds
+                        Duration.millis(2000), 
                         ae -> depositmessagelabel.setText("")
                         
                     ));

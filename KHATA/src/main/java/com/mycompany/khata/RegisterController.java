@@ -45,7 +45,6 @@ public class RegisterController {
       
     @FXML
     private void handleRegister() {
-        System.out.println("Register button clicked");
     
         if (usernameField.getText().isBlank() || 
             firstNameField.getText().isBlank() || 
@@ -56,7 +55,7 @@ public class RegisterController {
             confirmPasswordField.getText().isBlank()) {
             
             RegisterMessageLabel.setText("Fill all the information");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
             ae -> RegisterMessageLabel.setText("")));
             atimeline.play();
             return;
@@ -65,7 +64,7 @@ public class RegisterController {
 
         if (dobField.getValue() == null || dobField.getValue().isAfter(LocalDate.now())) {
             RegisterMessageLabel.setText("Invalid date of birth");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
             ae -> RegisterMessageLabel.setText("")));
             atimeline.play();
            
@@ -74,16 +73,7 @@ public class RegisterController {
 
         if (!passwordField.getText().equals(confirmPasswordField.getText())) {
             RegisterMessageLabel.setText("Passwords do not match");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
-            ae -> RegisterMessageLabel.setText("")));
-            atimeline.play();
-           
-            return;
-        }
-
-        if (!passwordField.getText().equals(confirmPasswordField.getText())) {
-            RegisterMessageLabel.setText("Passwords do not match");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
             ae -> RegisterMessageLabel.setText("")));
             atimeline.play();
            
@@ -91,21 +81,25 @@ public class RegisterController {
         }
         if (!isPasswordStrong(passwordField.getText())) {
             RegisterMessageLabel.setText("Password must be at least 8 characters long");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
             ae -> RegisterMessageLabel.setText("")));
             atimeline.play();
         
             return;
         }
+
+        
              Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Account Type");
         alert.setHeaderText("Select Account Type");
+        alert.setContentText("Choose one of the following account types:");
 
         ChoiceBox<String> choiceBox = new ChoiceBox<>();
         choiceBox.getItems().addAll("Saving Account", "Current Account", "Fixed Account");
 
         VBox vbox = new VBox();
         vbox.getChildren().add(choiceBox);
+        vbox.setSpacing(10);
         alert.getDialogPane().setContent(vbox);
 
         Optional<ButtonType> result = alert.showAndWait();
@@ -113,10 +107,12 @@ public class RegisterController {
             String selectedAccountType = choiceBox.getValue();
             if (selectedAccountType == null) {
                 RegisterMessageLabel.setText("Please select an account type");
+                Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
+                ae -> RegisterMessageLabel.setText("")));
+                atimeline.play();
                 return;
             }
 
-            // Handle account type selection logic here
             System.out.println("Selected account type: " + selectedAccountType);
             RegisterMessageLabel.setText("Registration successful");
             Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
@@ -125,11 +121,12 @@ public class RegisterController {
             
         } else {
             RegisterMessageLabel.setText("Registration cancelled");
-              Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+              Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
             ae -> RegisterMessageLabel.setText("")));
             atimeline.play();
         }
-    }  
+    }
+    
     
     private boolean isPasswordStrong(String password) {
         return password.length() >= 2;
@@ -144,3 +141,4 @@ public class RegisterController {
         }
     }
 }
+   

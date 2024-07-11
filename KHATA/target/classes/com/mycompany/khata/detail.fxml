@@ -11,71 +11,71 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="1599.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.DetailController">
    <children>
-      <AnchorPane layoutX="555.0" layoutY="41.0" prefHeight="568.0" prefWidth="644.0">
+      <AnchorPane layoutX="542.0" layoutY="72.0" prefHeight="612.0" prefWidth="657.0">
          <children>
-            <Label layoutX="184.0" layoutY="39.0" prefHeight="17.0" prefWidth="277.0" text="Account details">
+            <Label layoutX="190.0" layoutY="23.0" prefHeight="17.0" prefWidth="277.0" text="Account details">
                <font>
                   <Font name="System Bold Italic" size="36.0" />
                </font>
             </Label>
-            <TextField layoutX="239.0" layoutY="117.0" prefHeight="35.0" prefWidth="203.0">
+            <TextField fx:id="usernameField" layoutX="239.0" layoutY="117.0" prefHeight="35.0" prefWidth="203.0">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </TextField>
-            <Button layoutX="275.0" layoutY="417.0" onAction="#handleexit" prefHeight="27.0" prefWidth="95.0" text="EXIT">
+            <Button layoutX="281.0" layoutY="444.0" onAction="#handleexit" prefHeight="27.0" prefWidth="95.0" text="EXIT">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Label layoutX="76.0" layoutY="342.0" prefHeight="27.0" prefWidth="126.0" text="Total Balance">
+            <Label layoutX="79.0" layoutY="367.0" prefHeight="27.0" prefWidth="123.0" text="Total Balance">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="145.0" layoutY="178.0" prefHeight="27.0" prefWidth="52.0" text="Email">
+            <Label layoutX="145.0" layoutY="184.0" prefHeight="27.0" prefWidth="52.0" text="Email">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="108.0" layoutY="123.0" prefHeight="27.0" prefWidth="89.0" text="Username">
+            <Label layoutX="113.0" layoutY="123.0" prefHeight="27.0" prefWidth="89.0" text="Username">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="81.0" layoutY="287.0" prefHeight="27.0" prefWidth="116.0" text="Account code">
+            <Label layoutX="87.0" layoutY="306.0" prefHeight="27.0" prefWidth="116.0" text="Account code">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="58.0" layoutY="235.0" prefHeight="27.0" prefWidth="139.0" text="Type of Account">
+            <Label layoutX="58.0" layoutY="245.0" prefHeight="27.0" prefWidth="139.0" text="Type of Account">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="241.0" layoutY="172.0" prefHeight="35.0" prefWidth="203.0">
+            <TextField fx:id="accounttypeField" layoutX="241.0" layoutY="239.0" prefHeight="35.0" prefWidth="203.0">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="241.0" layoutY="229.0" prefHeight="35.0" prefWidth="203.0">
+            <TextField fx:id="accountcodeField" layoutX="241.0" layoutY="300.0" prefHeight="35.0" prefWidth="203.0">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="241.0" layoutY="281.0" prefHeight="35.0" prefWidth="203.0">
+            <TextField fx:id="balanceField" layoutX="241.0" layoutY="361.0" prefHeight="35.0" prefWidth="203.0">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="241.0" layoutY="336.0" prefHeight="35.0" prefWidth="203.0">
+            <TextField layoutX="239.0" layoutY="178.0" prefHeight="35.0" prefWidth="203.0">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </TextField>
          </children>
       </AnchorPane>
-      <VBox alignment="CENTER" layoutX="-6.0" prefHeight="738.0" prefWidth="447.0" spacing="20.0" style="-fx-background-color: #59659a;">
+      <VBox alignment="CENTER" layoutY="1.0" prefHeight="738.0" prefWidth="447.0" spacing="20.0" style="-fx-background-color: #59659a;">
          <children>
             <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking" textFill="WHITE">
                <font>

@@ -15,7 +15,7 @@ import javafx.util.Duration;
 public class LoginController {
 
     @FXML
-    private TextField accountNoField;
+    private TextField usernameField;
 
     @FXML
     private PasswordField passwordField;
@@ -44,16 +44,16 @@ public class LoginController {
 
     @FXML
     private void handleLogin(ActionEvent event) {
-        String accountNo = accountNoField.getText();
+        String username = usernameField.getText();
         String password = passwordField.getText();
         
-        if(accountNoField.getText().isBlank()==true || passwordField.getText().isBlank()==true){
+        if(usernameField.getText().isBlank()==true || passwordField.getText().isBlank()==true){
             LoginMessageLabel.setText("Enter Username or Password");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
             ae -> LoginMessageLabel.setText("")));
             atimeline.play();
             return;
-        }else if (isValidLogin(accountNo, password)) {
+        }else if (isValidLogin(username, password)) {
             try {
                 App.setRoot("mainpage");
             } catch (IOException e) {
@@ -62,19 +62,19 @@ public class LoginController {
             }
         } else {
             LoginMessageLabel.setText("Invalid Username or Password.");
-             Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+             Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
             ae -> LoginMessageLabel.setText("")));
             atimeline.play();
         }
     }
 
-    private boolean isValidLogin(String accountNo, String password) {
-        return accountNo.equals("john") && password.equals("123");
+    private boolean isValidLogin(String username, String password) {
+        return username.equals("john") && password.equals("123");
     }
 
     @FXML
     private void handleReset() {
-        accountNoField.clear();
+        usernameField.clear();
         passwordField.clear();
         passwordFieldVisible.clear();
         LoginMessageLabel.setText("");  

@@ -134,6 +134,6 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <DatePicker layoutX="783.0" layoutY="187.0" prefHeight="39.0" prefWidth="230.0" />
+      <DatePicker fx:id="dateField" layoutX="783.0" layoutY="187.0" prefHeight="39.0" prefWidth="230.0" />
    </children>
 </AnchorPane>

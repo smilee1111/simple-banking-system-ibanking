@@ -136,7 +136,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="726.0" layoutY="492.0" onAction="#handletransferfunds" prefHeight="113.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
+      <Button layoutX="726.0" layoutY="492.0" onAction="#handlehistory" prefHeight="113.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
          <graphic>
             <ImageView fitHeight="65.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                <image>

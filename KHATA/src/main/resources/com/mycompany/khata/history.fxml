@@ -12,18 +12,23 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="1225.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.HistoryController">
    <children>
-      <AnchorPane layoutX="583.0" layoutY="32.0" prefHeight="589.0" prefWidth="590.0">
+      <AnchorPane layoutX="506.0" layoutY="32.0" prefHeight="644.0" prefWidth="673.0">
          <children>
-            <Label layoutX="117.0" layoutY="47.0" text="Transaction History">
+            <Label layoutX="158.0" layoutY="32.0" text="Transaction History">
                <font>
                   <Font name="System Bold Italic" size="36.0" />
                </font>
             </Label>
-            <ScrollPane layoutY="130.0" prefHeight="391.0" prefWidth="590.0">
+            <ScrollPane layoutY="130.0" prefHeight="413.0" prefWidth="673.0">
                 <content>
-                    <TextArea prefHeight="391.0" prefWidth="576.0" />
+                    <TextArea fx:id="historylogField" prefHeight="466.0" prefWidth="670.0" />
                 </content>
             </ScrollPane>
+            <Button layoutX="307.0" layoutY="581.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="35.0" prefWidth="87.0" text="Exit">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <VBox alignment="CENTER" prefHeight="738.0" prefWidth="447.0" spacing="20.0" style="-fx-background-color: #59659a;">
@@ -95,10 +100,5 @@
             </Button>
          </children>
       </VBox>
-      <Button layoutX="835.0" layoutY="621.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="35.0" prefWidth="87.0" text="Exit">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

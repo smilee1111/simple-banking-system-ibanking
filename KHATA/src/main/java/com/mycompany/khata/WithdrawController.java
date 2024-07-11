@@ -46,7 +46,7 @@ public class WithdrawController {
 
     @FXML
     private void initialize() {
-        // Initialization code, if needed
+       
     }
 
     @FXML
@@ -98,12 +98,13 @@ public class WithdrawController {
     private void handleconfirmWithdraw(ActionEvent event) {
         if (usernameField.getText().isBlank() || 
         passwordField.getText().isBlank() || 
-        withdrawField.getText().isBlank()  ) {
+        withdrawField.getText().isBlank()||
+        dateField.getValue()==null  ) {
             withdrawmessagelabel.setText("Fill all the information");
-        Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000),
+        Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000),
          ae -> withdrawmessagelabel.setText("")));
          atimeline.play();
-        return;  // Stop further execution if fields are blank
+        return; 
     }
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Withdraw Confirm");
@@ -111,10 +112,8 @@ public class WithdrawController {
         
         if (alert.showAndWait().get() == ButtonType.OK) {
                     withdrawmessagelabel.setText("Withdraw Successful");
-                    
-                    // Clear the message after 2 seconds
                     Timeline timeline = new Timeline(new KeyFrame(
-                        Duration.millis(3000), // 2000 milliseconds = 2 seconds
+                        Duration.millis(2000), 
                         ae -> withdrawmessagelabel.setText("")
                     ));
                     timeline.play();

@@ -17,28 +17,31 @@ import javafx.scene.control.TextField;
 import javafx.util.Duration;
 public class InfoController {
     
+    
     @FXML
-    private TextField usernameField;
+    private Button confirmbutton;
 
     @FXML
-    private TextField firstnameField;
+    private DatePicker dateofbirthField;
 
     @FXML
-    private TextField lastnameField;
+    private TextField emailField;
 
     @FXML
-    private PasswordField passwordField;
-
-    @FXML
-    private DatePicker dateField;
+    private TextField firstNameField;
 
     @FXML
     private Label infomessagelabel;
 
     @FXML
-    private Button confirmbutton;
+    private TextField lastNameField;
 
-    
+    @FXML
+    private PasswordField passwordField;
+
+    @FXML
+    private TextField usernameField;
+   
     @FXML
     private void handledetail(ActionEvent event) {
         try {
@@ -94,9 +97,9 @@ public class InfoController {
           if (alert.showAndWait().get() == ButtonType.OK) {
             infomessagelabel.setText("Update Successful");
                     
-                    // Clear the message after 2 seconds
+                    
                     Timeline timeline = new Timeline(new KeyFrame(
-                        Duration.millis(3000),
+                        Duration.millis(2000),
                         ae -> infomessagelabel.setText("")
                     ));
                     timeline.play();

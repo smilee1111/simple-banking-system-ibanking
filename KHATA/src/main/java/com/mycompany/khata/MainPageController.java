@@ -30,10 +30,10 @@ public class MainPageController{
         mainpagemessagelabel.setTextFill(Color.BLACK);
         mainpagemessagelabel.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
 
-        // Clear the message and change the label color after 3 seconds
+       
         Timeline timeline = new Timeline(
             new KeyFrame(
-                Duration.millis(5000), // 3000 milliseconds = 3 seconds
+                Duration.millis(3000),
                 ae -> {
                     mainpagemessagelabel.setText("");
                     mainpagemessagelabel.setTextFill(Color.TRANSPARENT);

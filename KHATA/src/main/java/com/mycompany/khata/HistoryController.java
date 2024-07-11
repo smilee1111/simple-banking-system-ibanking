@@ -5,11 +5,15 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 public class HistoryController {
 
+    @FXML
+    private TextArea historylogField;
 
-        @FXML
+    
+    @FXML
     private void handledetail(ActionEvent event) {
         try {
             App.setRoot("detail");

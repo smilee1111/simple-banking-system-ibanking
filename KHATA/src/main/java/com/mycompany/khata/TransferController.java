@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -41,13 +42,13 @@ public class TransferController {
     @FXML
     private TextField transferamount;
 
-
-
+    @FXML
+    private DatePicker dateField;
 
 
     @FXML
     private void initialize() {
-        // Initialization code, if needed
+      
     }
 
     @FXML
@@ -100,12 +101,13 @@ public class TransferController {
         if (usernameField.getText().isBlank() || 
         passwordField.getText().isBlank() || 
         transferamount.getText().isBlank() ||
-        receiversaccountcode.getText().isBlank() ) {
+        receiversaccountcode.getText().isBlank()||
+        dateField.getValue()==null ) {
             transfermessagelabel.setText("Fill all the information");
-        Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000),
+        Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000),
          ae -> transfermessagelabel.setText("")));
          atimeline.play();
-        return;  // Stop further execution if fields are blank
+        return;  
     }
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Transfer Confirm");
@@ -116,7 +118,7 @@ public class TransferController {
                     
                     // Clear the message after 2 seconds
                     Timeline timeline = new Timeline(new KeyFrame(
-                        Duration.millis(3000),
+                        Duration.millis(2000),
                         ae -> transfermessagelabel.setText("")
                     ));
                     timeline.play();

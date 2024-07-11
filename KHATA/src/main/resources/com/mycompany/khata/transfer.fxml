@@ -13,32 +13,32 @@
 
 <AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="1474.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.TransferController">
    <children>
-      <Label layoutX="709.0" layoutY="188.0" prefHeight="27.0" prefWidth="45.0" text="Date">
+      <Label layoutX="715.0" layoutY="188.0" prefHeight="27.0" prefWidth="45.0" text="Date">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="667.0" layoutY="270.0" prefHeight="27.0" prefWidth="89.0" text="Username">
+      <Label layoutX="669.0" layoutY="257.0" prefHeight="27.0" prefWidth="89.0" text="Username">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="671.0" layoutY="335.0" prefHeight="27.0" prefWidth="82.0" text="password">
+      <Label layoutX="672.0" layoutY="326.0" prefHeight="27.0" prefWidth="82.0" text="password">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="608.0" layoutY="480.0" prefHeight="27.0" prefWidth="147.0" text="Transfer Amount">
+      <Label layoutX="608.0" layoutY="464.0" prefHeight="27.0" prefWidth="147.0" text="Transfer Amount">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="confirmbutton" layoutX="681.0" layoutY="565.0" mnemonicParsing="false" onAction="#handleconfirmTransfer" prefHeight="39.0" prefWidth="112.0" text="Confirm">
+      <Button fx:id="confirmbutton" layoutX="681.0" layoutY="546.0" mnemonicParsing="false" onAction="#handleconfirmTransfer" prefHeight="39.0" prefWidth="112.0" text="Confirm">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="945.0" layoutY="565.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="39.0" prefWidth="97.0" text="Exit">
+      <Button layoutX="945.0" layoutY="546.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="39.0" prefWidth="97.0" text="Exit">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -49,12 +49,12 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="passwordField" layoutX="783.0" layoutY="323.0" prefHeight="39.0" prefWidth="230.0">
+      <PasswordField fx:id="passwordField" layoutX="783.0" layoutY="320.0" prefHeight="39.0" prefWidth="230.0">
          <font>
             <Font size="18.0" />
          </font>
       </PasswordField>
-      <TextField fx:id="transferamount" layoutX="783.0" layoutY="461.0" prefHeight="39.0" prefWidth="230.0">
+      <TextField fx:id="transferamount" layoutX="783.0" layoutY="458.0" prefHeight="39.0" prefWidth="230.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -64,12 +64,12 @@
             <Font name="Cambria Math" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="549.0" layoutY="411.0" prefHeight="27.0" prefWidth="207.0" text="Receiver's Account Code">
+      <Label layoutX="550.0" layoutY="395.0" prefHeight="27.0" prefWidth="207.0" text="Receiver's Account Code">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="receiversaccountcode" layoutX="783.0" layoutY="392.0" prefHeight="39.0" prefWidth="230.0">
+      <TextField fx:id="receiversaccountcode" layoutX="783.0" layoutY="389.0" prefHeight="39.0" prefWidth="230.0">
          <font>
             <Font size="18.0" />
          </font>
