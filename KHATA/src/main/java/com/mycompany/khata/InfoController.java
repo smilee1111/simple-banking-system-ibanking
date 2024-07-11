@@ -6,6 +6,8 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -14,6 +16,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 public class InfoController {
     
@@ -88,24 +92,34 @@ public class InfoController {
     }
 
 
-    @FXML
+     @FXML
     private void handleconfirmInfo(ActionEvent event) {
-        Alert alert = new Alert(AlertType.CONFIRMATION);
-        alert.setTitle("Update Confirm");
-        alert.setHeaderText("Are you sure? do you want to Update??");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("loginpopup.fxml"));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load()));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Confirm Update");
 
-          if (alert.showAndWait().get() == ButtonType.OK) {
-            infomessagelabel.setText("Update Successful");
-                    
-                    
-                    Timeline timeline = new Timeline(new KeyFrame(
-                        Duration.millis(2000),
-                        ae -> infomessagelabel.setText("")
-                    ));
-                    timeline.play();
-                };
-       
+            LoginConfirmationPopupController controller = loader.getController();
+            controller.setStage(stage);
+            controller.setInfoController(this);
+
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
+
+    public void updateSuccessful() {
+        infomessagelabel.setText("Update Successful");
+
+        Timeline timeline = new Timeline(new KeyFrame(
+            Duration.millis(2000),
+            ae -> infomessagelabel.setText("")
+        ));
+        timeline.play();
+    }
     
 
     @FXML

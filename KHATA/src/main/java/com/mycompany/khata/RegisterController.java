@@ -7,14 +7,16 @@ import java.util.Optional;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class RegisterController {
@@ -42,96 +44,73 @@ public class RegisterController {
 
     @FXML
     private Label RegisterMessageLabel;
-      
+
     @FXML
     private void handleRegister() {
-    
+
         if (usernameField.getText().isBlank() || 
             firstNameField.getText().isBlank() || 
             lastNameField.getText().isBlank() || 
             emailField.getText().isBlank() || 
             passwordField.getText().isBlank() || 
-           dobField.getValue() == null ||
+            dobField.getValue() == null || 
             confirmPasswordField.getText().isBlank()) {
-            
-            RegisterMessageLabel.setText("Fill all the information");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
-            ae -> RegisterMessageLabel.setText("")));
-            atimeline.play();
+
+            showErrorMessage("Fill all the information");
             return;
         }
-        
 
         if (dobField.getValue() == null || dobField.getValue().isAfter(LocalDate.now())) {
-            RegisterMessageLabel.setText("Invalid date of birth");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
-            ae -> RegisterMessageLabel.setText("")));
-            atimeline.play();
-           
+            showErrorMessage("Invalid date of birth");
             return;
         }
 
         if (!passwordField.getText().equals(confirmPasswordField.getText())) {
-            RegisterMessageLabel.setText("Passwords do not match");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
-            ae -> RegisterMessageLabel.setText("")));
-            atimeline.play();
-           
+            showErrorMessage("Passwords do not match");
             return;
         }
+
         if (!isPasswordStrong(passwordField.getText())) {
-            RegisterMessageLabel.setText("Password must be at least 8 characters long");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
-            ae -> RegisterMessageLabel.setText("")));
-            atimeline.play();
-        
+            showErrorMessage("Password must be at least 8 characters long");
             return;
         }
 
-        
-             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Account Type");
-        alert.setHeaderText("Select Account Type");
-        alert.setContentText("Choose one of the following account types:");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/mycompany/khata/accounttype.fxml"));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load()));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Account Type");
 
-        ChoiceBox<String> choiceBox = new ChoiceBox<>();
-        choiceBox.getItems().addAll("Saving Account", "Current Account", "Fixed Account");
+            AccountTypeController controller = loader.getController();
+            controller.setStage(stage);
+            controller.setRegisterController(this);
 
-        VBox vbox = new VBox();
-        vbox.getChildren().add(choiceBox);
-        vbox.setSpacing(10);
-        alert.getDialogPane().setContent(vbox);
-
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK) {
-            String selectedAccountType = choiceBox.getValue();
-            if (selectedAccountType == null) {
-                RegisterMessageLabel.setText("Please select an account type");
-                Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
-                ae -> RegisterMessageLabel.setText("")));
-                atimeline.play();
-                return;
-            }
-
-            System.out.println("Selected account type: " + selectedAccountType);
-            RegisterMessageLabel.setText("Registration successful");
-            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
-            ae -> RegisterMessageLabel.setText("")));
-            atimeline.play();
-            
-        } else {
-            RegisterMessageLabel.setText("Registration cancelled");
-              Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(2000), 
-            ae -> RegisterMessageLabel.setText("")));
-            atimeline.play();
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-    
-    
-    private boolean isPasswordStrong(String password) {
-        return password.length() >= 2;
+
+    private void showErrorMessage(String message) {
+        RegisterMessageLabel.setText(message);
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(2000), ae -> RegisterMessageLabel.setText("")));
+        timeline.play();
     }
-    
+
+    public void registerSuccessful() {
+        RegisterMessageLabel.setText("Registration successful");
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(3000), ae -> RegisterMessageLabel.setText("")));
+        timeline.play();
+        usernameField.clear();
+        firstNameField.clear();
+        lastNameField .clear();
+        emailField.clear();        
+        passwordField.clear();
+        dobField.setValue(null);
+        confirmPasswordField.clear();
+    }
+
     @FXML
     private void handleBackToLogin() {
         try {
@@ -140,5 +119,8 @@ public class RegisterController {
             e.printStackTrace();
         }
     }
+
+    private boolean isPasswordStrong(String password) {
+        return password.length() >= 2;
+    }
 }
-   
