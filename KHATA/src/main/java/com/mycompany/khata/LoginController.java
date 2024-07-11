@@ -1,12 +1,16 @@
 package com.mycompany.khata;
 
 import java.io.IOException;
+
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 
 public class LoginController {
 
@@ -45,6 +49,9 @@ public class LoginController {
         
         if(accountNoField.getText().isBlank()==true || passwordField.getText().isBlank()==true){
             LoginMessageLabel.setText("Enter Username or Password");
+            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+            ae -> LoginMessageLabel.setText("")));
+            atimeline.play();
             return;
         }else if (isValidLogin(accountNo, password)) {
             try {
@@ -55,6 +62,9 @@ public class LoginController {
             }
         } else {
             LoginMessageLabel.setText("Invalid Username or Password.");
+             Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+            ae -> LoginMessageLabel.setText("")));
+            atimeline.play();
         }
     }
 
@@ -67,7 +77,7 @@ public class LoginController {
         accountNoField.clear();
         passwordField.clear();
         passwordFieldVisible.clear();
-        LoginMessageLabel.setText("");  // Clear the login message label
+        LoginMessageLabel.setText("");  
     }
 
     @FXML

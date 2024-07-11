@@ -11,18 +11,67 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.WithdrawController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="1474.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.WithdrawController">
    <children>
-      <Button layoutX="361.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleconfirm" text="Confirm" />
-      <Button layoutX="428.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleexit" text="Exit" />
-      <DatePicker layoutX="349.0" layoutY="123.0" />
-      <Label layoutX="266.0" layoutY="127.0" prefHeight="17.0" prefWidth="52.0" text="Date" />
-      <Label layoutX="272.0" layoutY="186.0" text="Withdraw Amount" />
-      <Label layoutX="332.0" layoutY="55.0" prefHeight="39.0" prefWidth="141.0" text="Withdraw Form" />
-      <TextField layoutX="379.0" layoutY="173.0" />
-      <VBox alignment="CENTER" layoutX="24.0" layoutY="43.0" prefHeight="410.0" prefWidth="232.0">
+      <Label layoutX="715.0" layoutY="203.0" prefHeight="27.0" prefWidth="45.0" text="Date">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="674.0" layoutY="274.0" prefHeight="27.0" prefWidth="89.0" text="Username">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="677.0" layoutY="351.0" prefHeight="27.0" prefWidth="82.0" text="password">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="597.0" layoutY="421.0" prefHeight="27.0" prefWidth="163.0" text="Withdraw Amount">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmbutton" layoutX="685.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleconfirmWithdraw" prefHeight="39.0" prefWidth="112.0" text="Confirm">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="929.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="39.0" prefWidth="97.0" text="Exit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="usernameField" layoutX="793.0" layoutY="268.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="withdrawField" layoutX="793.0" layoutY="415.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="741.0" layoutY="69.0" prefHeight="65.0" prefWidth="251.0" text="Withdraw form">
+         <font>
+            <Font name="Cambria Math" size="36.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" layoutX="792.0" layoutY="339.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </PasswordField>
+      <Label fx:id="withdrawmessagelabel" alignment="CENTER" layoutX="652.0" layoutY="145.0" prefHeight="27.0" prefWidth="429.0" textFill="#263357">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateField" layoutX="793.0" layoutY="197.0" prefHeight="39.0" prefWidth="230.0" />
+      <VBox alignment="CENTER" prefHeight="738.0" prefWidth="447.0" spacing="20.0" style="-fx-background-color: #59659a;">
          <children>
-            <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking">
+            <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="22.0" />
                </font>
@@ -89,9 +138,5 @@
             </Button>
          </children>
       </VBox>
-      <TextField layoutX="371.0" layoutY="235.0" />
-      <PasswordField layoutX="389.0" layoutY="283.0" />
-      <Label layoutX="318.0" layoutY="239.0" text="Account Code" />
-      <Label layoutX="304.0" layoutY="287.0" text="Password" />
    </children>
 </AnchorPane>

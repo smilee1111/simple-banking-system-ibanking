@@ -11,22 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.DepositController">
+<AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="1474.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.DepositController">
    <children>
-      <Label layoutX="417.0" layoutY="130.0" prefHeight="25.0" prefWidth="34.0" text="date" />
-      <Label layoutX="487.0" layoutY="73.0" prefHeight="25.0" prefWidth="160.0" text="deposit form">
-         <font>
-            <Font name="System Bold Italic" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="371.0" layoutY="178.0" prefHeight="34.0" prefWidth="92.0" text=" deposit amount" />
-      <DatePicker layoutX="480.0" layoutY="130.0" />
-      <TextField layoutX="480.0" layoutY="182.0" />
-      <Button fx:id="confirmbutton" layoutX="418.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleconfirm" prefHeight="25.0" prefWidth="70.0" text="confirm" />
-      <Button layoutX="568.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="25.0" prefWidth="81.0" text="Exit" />
-      <VBox alignment="CENTER" layoutX="24.0" layoutY="48.0" prefHeight="410.0" prefWidth="232.0">
+      <VBox alignment="CENTER" prefHeight="738.0" prefWidth="447.0" spacing="20.0" style="-fx-background-color: #59659a;">
          <children>
-            <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking">
+            <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="22.0" />
                </font>
@@ -93,9 +82,58 @@
             </Button>
          </children>
       </VBox>
-      <TextField layoutX="493.0" layoutY="228.0" />
-      <Label layoutX="409.0" layoutY="282.0" text="password" />
-      <Label layoutX="409.0" layoutY="232.0" text="Username" />
-      <PasswordField layoutX="505.0" layoutY="278.0" />
+      <Label layoutX="708.0" layoutY="193.0" prefHeight="27.0" prefWidth="45.0" text="Date">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="664.0" layoutY="264.0" prefHeight="27.0" prefWidth="89.0" text="Username">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="667.0" layoutY="341.0" prefHeight="27.0" prefWidth="82.0" text="password">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="607.0" layoutY="411.0" prefHeight="27.0" prefWidth="143.0" text="Deposit Amount">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmbuttons" layoutX="675.0" layoutY="506.0" mnemonicParsing="false" onAction="#handleconfirmDeposit" prefHeight="39.0" prefWidth="112.0" text="Confirm">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="919.0" layoutY="506.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="39.0" prefWidth="97.0" text="Exit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="usernameField" layoutX="783.0" layoutY="258.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="depositField" layoutX="783.0" layoutY="405.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></TextField>
+      <Label layoutX="731.0" layoutY="59.0" prefHeight="65.0" prefWidth="251.0" text="Deposit form">
+         <font>
+            <Font name="Cambria Math" size="36.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" layoutX="782.0" layoutY="329.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></PasswordField>
+      <Label fx:id="depositmessagelabel" alignment="CENTER" layoutX="642.0" layoutY="135.0" prefHeight="27.0" prefWidth="429.0" textFill="#263357">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="783.0" layoutY="187.0" prefHeight="39.0" prefWidth="230.0" />
    </children>
 </AnchorPane>

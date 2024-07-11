@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -10,23 +11,77 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="946.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.TransferController">
+<AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="1474.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.TransferController">
    <children>
-      <Button layoutX="599.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="25.0" prefWidth="59.0" text="Exit" />
-      <Label layoutX="433.0" layoutY="37.0" prefHeight="47.0" prefWidth="163.0" text="Transaction History">
+      <Label layoutX="709.0" layoutY="188.0" prefHeight="27.0" prefWidth="45.0" text="Date">
          <font>
-            <Font name="Verdana Bold Italic" size="14.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="485.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleconfirm" text="Confirm" />
-      <Label layoutX="385.0" layoutY="102.0" text="Account Code" />
-      <Label layoutX="385.0" layoutY="166.0" text="Username" />
-      <Label layoutX="397.0" layoutY="224.0" text="Password" />
-      <TextField layoutX="487.0" layoutY="98.0" />
-      <TextField layoutX="479.0" layoutY="162.0" />
-      <VBox alignment="CENTER" layoutX="48.0" layoutY="37.0" prefHeight="410.0" prefWidth="254.0">
+      <Label layoutX="667.0" layoutY="270.0" prefHeight="27.0" prefWidth="89.0" text="Username">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="671.0" layoutY="335.0" prefHeight="27.0" prefWidth="82.0" text="password">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="608.0" layoutY="480.0" prefHeight="27.0" prefWidth="147.0" text="Transfer Amount">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmbutton" layoutX="681.0" layoutY="565.0" mnemonicParsing="false" onAction="#handleconfirmTransfer" prefHeight="39.0" prefWidth="112.0" text="Confirm">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="945.0" layoutY="565.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="39.0" prefWidth="97.0" text="Exit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="dateField" layoutX="783.0" layoutY="182.0" prefHeight="39.0" prefWidth="230.0" />
+      <TextField fx:id="usernameField" layoutX="783.0" layoutY="251.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="783.0" layoutY="323.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="transferamount" layoutX="783.0" layoutY="461.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="773.0" layoutY="62.0" prefHeight="65.0" prefWidth="251.0" text="Transfer Funds">
+         <font>
+            <Font name="Cambria Math" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="549.0" layoutY="411.0" prefHeight="27.0" prefWidth="207.0" text="Receiver's Account Code">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="receiversaccountcode" layoutX="783.0" layoutY="392.0" prefHeight="39.0" prefWidth="230.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="transfermessagelabel" alignment="CENTER" layoutX="705.0" layoutY="134.0" prefHeight="27.0" prefWidth="387.0" textFill="#3a4783">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" prefHeight="738.0" prefWidth="447.0" spacing="20.0" style="-fx-background-color: #59659a;">
          <children>
-            <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking">
+            <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="22.0" />
                </font>
@@ -93,8 +148,5 @@
             </Button>
          </children>
       </VBox>
-      <Label layoutX="398.0" layoutY="275.0" text="Transfer Amount" />
-      <TextField layoutX="479.0" layoutY="271.0" />
-      <PasswordField layoutX="479.0" layoutY="220.0" />
    </children>
 </AnchorPane>

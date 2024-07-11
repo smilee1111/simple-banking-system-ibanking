@@ -37,7 +37,7 @@
 
         <!-- Sign Up button and label -->
         <HBox alignment="CENTER_RIGHT" layoutX="350" layoutY="320" spacing="5" />
-        <Button layoutX="1032.0" layoutY="443.0" onAction="#handleReset" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #b19cd9;" text="Reset" textFill="#3c245e">
+        <Button layoutX="1034.0" layoutY="443.0" onAction="#handleReset" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #b19cd9;" text="Reset" textFill="#3c245e">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
@@ -74,7 +74,7 @@
                 <Font name="System Bold Italic" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="1007.0" layoutY="551.0" prefHeight="39.0" prefWidth="237.0" text="---Create Your Own KHATA" textFill="WHITE">
+        <Label layoutX="1008.0" layoutY="558.0" prefHeight="39.0" prefWidth="237.0" text="---Create Your Own KHATA" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>

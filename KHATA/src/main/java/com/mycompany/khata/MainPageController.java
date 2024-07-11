@@ -2,11 +2,48 @@
 package com.mycompany.khata;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.util.Duration;
+
 import java.io.IOException;
+
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Color;
+import javafx.geometry.Insets;
 
 public class MainPageController{
+
+
+    @FXML
+    private Label mainpagemessagelabel;
+
+    @FXML
+    private void initialize() { mainpagemessagelabel.setText("  Account Selected");
+        mainpagemessagelabel.setTextFill(Color.BLACK);
+        mainpagemessagelabel.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+
+        // Clear the message and change the label color after 3 seconds
+        Timeline timeline = new Timeline(
+            new KeyFrame(
+                Duration.millis(5000), // 3000 milliseconds = 3 seconds
+                ae -> {
+                    mainpagemessagelabel.setText("");
+                    mainpagemessagelabel.setTextFill(Color.TRANSPARENT);
+                    mainpagemessagelabel.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY)));
+                }
+            )
+        );
+        timeline.play();
+    }
+
 
     @FXML
     private ImageView bankLogo;

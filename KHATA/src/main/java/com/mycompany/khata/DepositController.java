@@ -1,30 +1,44 @@
 package com.mycompany.khata;
 
 import java.io.IOException;
-import javafx.application.Platform;
+
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Button;
-
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.DatePicker;
+import javafx.util.Duration;
 
 public class DepositController {
 
     @FXML
-    private Button confirmbutton;
+    private TextField usernameField;
+
+    @FXML
+    private TextField depositField; // Ensure this matches the FXML
+
+    @FXML
+    private PasswordField passwordField;
+
+    @FXML
+    private DatePicker dateField;
+
+    @FXML
+    private Label depositmessagelabel;
+
+    @FXML
+    private Button confirmbuttons;
 
     @FXML
     private AnchorPane scenepane;
-
-
-
-    @FXML
-    private void initialize() {
-        // Initialization code, if needed
-    }
 
     @FXML
     private void handledetail(ActionEvent event) {
@@ -72,26 +86,39 @@ public class DepositController {
     }
 
     @FXML
-    private void handleconfirm(ActionEvent event) {
+    private void handleconfirmDeposit(ActionEvent event) {
+        if (usernameField.getText().isBlank() || 
+            passwordField.getText().isBlank() || 
+            depositField.getText().isBlank()  ) {
+            depositmessagelabel.setText("Fill all the information");
+            Timeline atimeline=new Timeline(new KeyFrame(Duration.millis(3000), 
+            ae -> depositmessagelabel.setText("")));
+            atimeline.play();
+            return;  // Stop further execution if fields are blank
+        }
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Deposit Confirm");
-        alert.setHeaderText("Are you sure?");
-        alert.setContentText("Do you want to deposit?");
+        alert.setHeaderText("Are you sure? do you want to deposit??");
+  
         if (alert.showAndWait().get() == ButtonType.OK) {
-            Platform.runLater(() -> {
-                try {
-                    App.setRoot("mainpage");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("You deposited");
-                
-            });
+                    depositmessagelabel.setText("Deposit Successful");
+                    depositField.clear();
+                    usernameField.clear();
+                    passwordField.clear();
+                    
+                    
+                    // Clear the message after 2 seconds
+                    Timeline timeline = new Timeline(new KeyFrame(
+                        Duration.millis(3000), // 2000 milliseconds = 2 seconds
+                        ae -> depositmessagelabel.setText("")
+                        
+                    ));
+                    timeline.play();
+                };
         }
-    }
-
+   
     @FXML
-    private void handleexit() {
+    private void handleexit(ActionEvent event) {
         try {
             App.setRoot("mainpage");
         } catch (IOException e) {

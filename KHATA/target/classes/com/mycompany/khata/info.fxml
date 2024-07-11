@@ -3,32 +3,135 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.InfoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1850.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.khata.InfoController">
    <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane layoutX="521.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="759.0" prefWidth="600.0">
          <children>
-            <Button layoutX="249.0" layoutY="298.0" mnemonicParsing="false" text="Update" textFill="#252323" />
-            <Label layoutX="167.0" layoutY="89.0" prefHeight="17.0" prefWidth="79.0" text="Username" />
-            <Label layoutX="152.0" layoutY="204.0" prefHeight="17.0" prefWidth="89.0" text="date of birth" />
-            <Label layoutX="187.0" layoutY="248.0" prefHeight="17.0" prefWidth="46.0" text="email" />
-            <Label layoutX="166.0" layoutY="126.0" prefHeight="17.0" prefWidth="79.0" text="First name" />
-            <Label layoutX="172.0" layoutY="163.0" prefHeight="17.0" prefWidth="66.0" text="last name" />
-            <TextField layoutX="248.0" layoutY="85.0" />
-            <TextField layoutX="248.0" layoutY="122.0" />
-            <TextField layoutX="248.0" layoutY="159.0" />
-            <TextField layoutX="248.0" layoutY="244.0" />
-            <Button layoutX="341.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="25.0" prefWidth="40.0" text="Exit" />
-            <Label layoutX="205.0" layoutY="25.0" prefHeight="40.0" prefWidth="235.0" text="Personal Info">
+            <Button fx:id="confirmbutton" layoutX="196.0" layoutY="469.0" mnemonicParsing="false" onAction="#handleconfirmInfo" prefHeight="35.0" prefWidth="88.0" text="Update" textFill="#252323" />
+            <Label layoutX="149.0" layoutY="134.0" prefHeight="27.0" prefWidth="88.0" text="Username">
                <font>
-                  <Font name="System Bold Italic" size="24.0" />
+                  <Font name="System Bold Italic" size="18.0" />
+               </font></Label>
+            <TextField fx:id="usernameField" layoutX="258.0" layoutY="130.0" prefHeight="35.0" prefWidth="188.0" />
+            <TextField fx:id="firstnamefield" layoutX="258.0" layoutY="183.0" prefHeight="35.0" prefWidth="188.0" />
+            <TextField fx:id="lastnameField" layoutX="258.0" layoutY="236.0" prefHeight="35.0" prefWidth="188.0" />
+            <TextField fx:id="emailField" layoutX="258.0" layoutY="342.0" prefHeight="35.0" prefWidth="188.0" />
+            <Button layoutX="385.0" layoutY="469.0" mnemonicParsing="false" onAction="#handleexit" prefHeight="35.0" prefWidth="88.0" text="Exit" />
+            <Label layoutX="206.0" layoutY="8.0" prefHeight="40.0" prefWidth="235.0" text="Personal Info">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
                </font>
             </Label>
-            <DatePicker layoutX="250.0" layoutY="200.0" prefHeight="25.0" prefWidth="149.0" />
+            <DatePicker fx:id="dateofbirthField" layoutX="258.0" layoutY="289.0" prefHeight="35.0" prefWidth="188.0" />
+            <Label layoutX="146.0" layoutY="187.0" prefHeight="27.0" prefWidth="94.0" text="First name">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="240.0" prefHeight="27.0" prefWidth="88.0" text="Last name">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="293.0" prefHeight="27.0" prefWidth="111.0" text="Date of birth">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="346.0" prefHeight="27.0" prefWidth="55.0" text="Email">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="258.0" layoutY="395.0" prefHeight="35.0" prefWidth="188.0" />
+            <Label layoutX="142.0" layoutY="399.0" prefHeight="27.0" prefWidth="88.0" text="Password">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="infomessagelabel" alignment="CENTER" layoutX="122.0" layoutY="82.0" prefHeight="27.0" prefWidth="357.0" textFill="#2f5479">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
+      <VBox alignment="CENTER" layoutY="4.0" prefHeight="738.0" prefWidth="447.0" spacing="20.0" style="-fx-background-color: #59659a;">
+         <children>
+            <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#handledetail" prefHeight="61.0" prefWidth="230.0" text="Account Details">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@details.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handledeposit" prefHeight="53.0" prefWidth="230.0" text="Deposit Cash">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@deposit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlewithdraw" prefHeight="65.0" prefWidth="230.0" text="Withdraw Cash">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@withdraw.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handletransferfunds" prefHeight="64.0" prefWidth="230.0" text="Transfer Cash">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@transfer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlehistory" prefHeight="65.0" prefWidth="230.0" text="Transaction History">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@history.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

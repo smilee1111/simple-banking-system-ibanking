@@ -25,7 +25,7 @@
                </font></Button>
             </children>
         </HBox>
-        <VBox alignment="CENTER" layoutX="52.0" layoutY="249.0" prefHeight="410.0" prefWidth="232.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="994.0" AnchorPane.topAnchor="249.0">
+        <VBox alignment="CENTER" layoutX="14.0" layoutY="244.0" prefHeight="410.0" prefWidth="232.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="1032.0" AnchorPane.topAnchor="244.0">
             <children>
             <Label prefHeight="53.0" prefWidth="238.0" text="Welcome To iBanking">
                <font>
@@ -118,9 +118,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="719.0" layoutY="266.0" onAction="#handledeposit" prefHeight="113.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
+      <Button layoutX="726.0" layoutY="267.0" onAction="#handledeposit" prefHeight="113.0" prefWidth="153.0" style="-fx-background-color: #EFEFEF;">
          <graphic>
-            <ImageView fitHeight="122.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="97.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@deposit.png" />
                </image>
@@ -150,20 +150,20 @@
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="334.0" layoutY="192.0" prefHeight="32.0" prefWidth="901.0" style="-fx-background-color: #a2d78a;" text="Account Selected" textFill="#434343">
+      <Label fx:id="mainpagemessagelabel" layoutX="325.0" layoutY="192.0" prefHeight="32.0" prefWidth="910.0" style="-fx-background-color: #a2d78a;" textFill="#1e1e1e">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
       <Circle fill="WHITE" layoutX="175.0" layoutY="124.0" radius="80.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label layoutX="127.0" layoutY="214.0" prefHeight="20.0" prefWidth="130.0" text="Profile Image" textFill="#3e3f54">
+      <Label alignment="CENTER" layoutX="110.0" layoutY="224.0" prefHeight="20.0" prefWidth="130.0" text="Profile Image" textFill="#3e3f54">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <ImageView fitHeight="98.0" fitWidth="121.0" layoutX="120.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="142.0" fitWidth="153.0" layoutX="105.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@profiledefault.png" />
+            <Image url="@profile.png" />
          </image>
       </ImageView>
     </children>
